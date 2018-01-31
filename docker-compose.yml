@@ -8,11 +8,11 @@ pwntools:
     expose:
         - "4597"
 
-binary:
-    build: ./binary
+pwntools2:
+    build: ./pwntools2
     volumes:
-        - ./binary/home:/home/binary:ro
-        - ./binary/xinetd:/etc/xinetd.d/xinetd:ro
+        - ./pwntools2/home:/home/pwntools2:ro
+        - ./pwntools2/xinetd:/etc/xinetd.d/xinetd:ro
     ports:
         - "10401:4597"
     expose:
