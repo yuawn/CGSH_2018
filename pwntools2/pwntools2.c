@@ -20,7 +20,7 @@ int main(){
     seed = (unsigned)time(NULL);
     srand(seed);
 
-    puts( "Guess the number then get the flag :)" );
+    puts( "Guess the number ( 0 ~ 1023 ) then get the flag :)" );
 
     int magic = random() % 1024 , t = 10;
 
