@@ -1,0 +1,15 @@
+service return
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/return/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = return
+        port = 4597
+        flags = REUSE
+        per_source = 10
+        rlimit_cpu = 3
+        nice = 18
+}

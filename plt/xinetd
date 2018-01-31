@@ -1,0 +1,15 @@
+service plt
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/plt/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = plt
+        port = 4597
+        flags = REUSE
+        per_source = 10
+        rlimit_cpu = 3
+        nice = 18
+}

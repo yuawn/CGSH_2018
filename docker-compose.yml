@@ -1,0 +1,49 @@
+pwntools:
+    build: ./pwntools
+    volumes:
+        - ./pwntools/home:/home/pwntools:ro
+        - ./pwntools/xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+        - "10400:4597"
+    expose:
+        - "4597"
+
+binary:
+    build: ./binary
+    volumes:
+        - ./binary/home:/home/binary:ro
+        - ./binary/xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+        - "10401:4597"
+    expose:
+        - "4597"
+
+return:
+    build: ./return
+    volumes:
+        - ./return/home:/home/return:ro
+        - ./return/xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+        - "10402:4597"
+    expose:
+        - "4597"
+
+shellcode:
+    build: ./shellcode
+    volumes:
+        - ./shellcode/home:/home/shellcode:ro
+        - ./shellcode/xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+        - "10403:4597"
+    expose:
+        - "4597"
+
+plt:
+    build: ./plt
+    volumes:
+        - ./plt/home:/home/plt:ro
+        - ./plt/xinetd:/etc/xinetd.d/xinetd:ro
+    ports:
+        - "10404:4597"
+    expose:
+        - "4597"
