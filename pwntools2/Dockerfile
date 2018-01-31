@@ -3,6 +3,6 @@ MAINTAINER yuawn
 RUN apt-get update
 RUN apt-get install xinetd -y
 RUN apt-get install libc6-dev-i386 -y
-RUN useradd -m pwntools
-RUN chown -R root:root /home/pwntools
+RUN useradd -m pwntools2
+RUN chown -R root:root /home/pwntools2
 CMD ["/usr/sbin/xinetd","-dontfork"]
